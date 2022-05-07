@@ -88,6 +88,8 @@ else ()
     set(type static)
 endif ()
 
+export(TARGETS tinyxml2 NAMESPACE tinyxml2:: FILE tinyxml2-${type}-targets.cmake)
+
 install(
     EXPORT tinyxml2-targets
     DESTINATION "${tinyxml2_INSTALL_CMAKEDIR}"
@@ -127,3 +129,4 @@ install(
     DESTINATION "${tinyxml2_INSTALL_PKGCONFIGDIR}"
     COMPONENT tinyxml2_development
 )
+
